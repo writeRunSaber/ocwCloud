@@ -1,0 +1,38 @@
+server:
+  port: 8001
+spring:
+#  devtools:
+#    restart:
+#      enabled: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ocwcloud?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    db-name: ocwcloud
+    filters: log4j,wall,mergeStat
+mybatis-plus:
+  mapper-locations: classpath*:com/ocw/springcloud/**/mapping/*.xml
+  typeAliasesPackage: com.ocw.springcloud.modular.model
+#  global-config:
+#    sql-parser-cache: true
+#    id-type: 0  #0:数据库ID自增   1:用户输入id  2:全局唯一id(IdWorker)  3:全局唯一ID(uuid)
+#    db-column-underline: false
+#    #字段策略 0:"忽略判断",1:"非 NULL 判断"),2:"非空判断"
+#    field-strategy: 2
+#    refresh-mapper: true #刷新mapper 调试神器
+#    #逻辑删除配置（下面3个配置）
+#    logic-delete-value: 1
+#    logic-not-delete-value: 0
+#    #自定义SQL注入器
+#    sql-injector: com.baomidou.mybatisplus.mapper.LogicSqlInjector
+#    meta-object-handler: com.stylefeng.guns.config.SystemMetaObjectHandler
+#    #自定义填充策略接口实现
+#    #meta-object-handler: com.baomidou.springboot.xxx
+#    #自定义SQL注入器
+#    #sql-injector: com.baomidou.springboot.xxx
+#  configuration:
+#    map-underscore-to-camel-case: false
+#    cache-enabled: true #配置的缓存的全局开关
+#    lazyLoadingEnabled: true #延时加载的开关
+#    multipleResultSetsEnabled: true #开启的话，延时加载一个属性时会加载该对象全部属性，否则按需加载属性
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句,调试用

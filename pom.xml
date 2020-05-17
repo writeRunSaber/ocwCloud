@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.ocw.springcloud</groupId>
+  <artifactId>ocwCloud</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>cloud-provider-payment8001</module>
+  </modules>
+  <packaging>pom</packaging>
+  <name>Maven</name>
+  <!-- FIXME change it to the project's website -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>12</maven.compiler.source>
+    <maven.compiler.target>12</maven.compiler.target>
+    <junit.version>4.12</junit.version>
+    <lombok.version>1.18.10</lombok.version>
+    <log4j.version>1.2.17</log4j.version>
+    <mysql.version>8.0.18</mysql.version>
+    <druid.version>1.1.6</druid.version>
+    <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
+    <mybatis-plus.version>2.1.9</mybatis-plus.version>
+    <fastjson.version>1.2.44</fastjson.version>
+  </properties>
+
+  <dependencyManagement>
+  <dependencies>
+  <dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-project-info-reports-plugin</artifactId>
+    <version>3.0.0</version>
+  </dependency>
+  <!--spring boot 2.2.2-->
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>2.2.2.RELEASE</version>
+    <type>pom</type>
+    <scope>import</scope>
+  </dependency>
+  <!--spring cloud Hoxton.SR1-->
+  <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-dependencies</artifactId>
+    <version>Hoxton.SR1</version>
+    <type>pom</type>
+    <scope>import</scope>
+  </dependency>
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatisplus-spring-boot-starter</artifactId>
+      <version>${mybatisplus-spring-boot-starter.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus</artifactId>
+      <version>${mybatis-plus.version}</version>
+    </dependency>
+    <!--junit-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+    </dependency>
+    <!--log4j-->
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>fastjson</artifactId>
+          <version>${fastjson.version}</version>
+      </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>${druid.version}</version>
+    </dependency>
+  </dependencies>
+
+  </dependencyManagement>
+</project>
